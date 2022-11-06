@@ -52,7 +52,7 @@ correct 3:
 	}
 ```
 
-You can play the example code here: [./code/loop/pf_1.go](./code/loop/pf_1.go)
+You can play the example code here: [../code/loop/pf_1.go](../code/loop/pf_1.go)
 
 ### Case 2
 
@@ -71,7 +71,7 @@ func (v *val) MyMethod() {
 The above example also will print the last element of values, the reason is the same. `Val` is the same single variable that takes on the value of each iteration. 
 One can fix it using the same methods as Case 1.
 
-You can play the example code here: [./code/loop/pf_2.go](./code/loop/pf_2.go)
+You can play the example code here: [../code/loop/pf_2.go](../code/loop/pf_2.go)
 
 ## Use reference to iterator variable
 
@@ -106,7 +106,7 @@ In each iteration, we append the address of `i` to the `out` slice, but since it
 	fmt.Println("Addresses:", out[0], out[1], out[2])
 ```
 
-You can play the example code here: [./code/loop/pf_3.go](./code/loop/pf_3.go)
+You can play the example code here: [../code/loop/pf_3.go](../code/loop/pf_3.go)
 
 
 ### Case 2
@@ -123,4 +123,4 @@ While the case 1 example might look a bit obvious, the same unexpected behavior 
 
 On each iteration, `i` is the same variable of array type. `i[:]` would return the slice of array, since slice inner pointer is pointing to the address of `i`, which remains the same through the loop body. Though On each iteration, the values of `i` changes, but the appended slice to `out` points to the same array variable `i`, so the printed element of values is always the last value of `i`.
 
-You can play the example code here: [./code/loop/pf_4.go](./code/loop/pf_4.go)
+You can play the example code here: [../code/loop/pf_4.go](../code/loop/pf_4.go)
